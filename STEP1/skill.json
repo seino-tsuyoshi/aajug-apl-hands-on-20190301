@@ -1,0 +1,89 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "応援メッセージ",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CheerIntent",
+                    "slots": [
+                        {
+                            "name": "staff",
+                            "type": "nameSlot"
+                        }
+                    ],
+                    "samples": [
+                        "{staff} さんを応援するよ",
+                        "{staff} さんを応援します",
+                        "{staff} を応援します",
+                        "{staff} さん"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "YourNameIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "AMAZON.FirstName"
+                        }
+                    ],
+                    "samples": [
+                        "{name} と言います",
+                        "{name} と申します",
+                        "{name}",
+                        "{name} です"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "nameSlot",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "せーの",
+                                "synonyms": [
+                                    "セーノ",
+                                    "せいの"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "しょう",
+                                "synonyms": [
+                                    "ショー"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "おんせん",
+                                "synonyms": [
+                                    "おんせんばばあ",
+                                    "オンセン",
+                                    "温泉"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

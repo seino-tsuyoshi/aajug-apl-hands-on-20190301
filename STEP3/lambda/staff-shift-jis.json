@@ -1,0 +1,38 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+              "type": "Container",
+              "justifyContent": "end",
+              "item": [
+                  {
+                      "type": "Image",
+                      "width": "100vw",
+                      "height": "90vh",
+                      "paddingTop": "200px",
+                      "source": "${payload.cheerData.properties.staffImage}",
+                      "align": "center",
+                      "borderRadius": "50"
+                  },
+                  {
+                      "type": "Text",
+                      "paddingRight": "50px",
+                      "paddingBottom": "50px",
+                      "textAlign": "right",
+                      "text": "${payload.cheerData.properties.staffString}"
+                  }
+              ]
+          }
+        ]
+    }
+}

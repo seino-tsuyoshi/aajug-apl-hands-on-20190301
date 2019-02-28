@@ -1,0 +1,211 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "payload"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "id": "top",
+                "height": "100vh",
+                "item": [
+                    {
+                        "type": "Pager",
+                        "id": "staffinfo",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "item": [
+                            {
+                                "type": "Container",
+                                "id": "top",
+                                "height": "100vh",
+                                "item": [
+                                    {
+                                        "type": "Image",
+                                        "width": "100vw",
+                                        "height": "100vh",
+                                        "opacity": 0.4,
+                                        "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/aajug.png",
+                                        "scale": "best-fill",
+                                        "position": "absolute"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "paddingTop": "50px",
+                                        "text": "すきなひとをえらんでね"
+                                    },
+                                    {
+                                        "type": "Container",
+                                        "width": "100vw",
+                                        "height": "65vh",
+                                        "alignItems": "center",
+                                        "direction": "row",
+                                        "justifyContent": "end",
+                                        "item": [
+                                            {
+                                                "type": "Image",
+                                                "width": "33vw",
+                                                "height": "50vh",
+                                                "paddingLeft": "20",
+                                                "paddingRight": "20",
+                                                "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/onsenbba.jpg",
+                                                "align": "left",
+                                                "borderRadius": "50"
+                                            },
+                                            {
+                                                "type": "Image",
+                                                "width": "33vw",
+                                                "height": "50vh",
+                                                "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/show.jpg",
+                                                "borderRadius": "50"
+                                            },
+                                            {
+                                                "type": "Image",
+                                                "width": "33vw",
+                                                "height": "50vh",
+                                                "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/seino.jpg",
+                                                "borderRadius": "50"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "Container",
+                                        "direction": "row",
+                                        "item": [
+                                            {
+                                                "type": "Text",
+                                                "width": "33vw",
+                                                "textAlign": "center",
+                                                "text": "おんせん"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "width": "33vw",
+                                                "textAlign": "center",
+                                                "text": "しょう"
+                                            },
+                                            {
+                                                "type": "Text",
+                                                "width": "33vw",
+                                                "textAlign": "center",
+                                                "text": "せーの"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "id": "onsen",
+                                "justifyContent": "end",
+                                "item": [
+                                    {
+                                        "type": "Image",
+                                        "width": "100vw",
+                                        "height": "90vh",
+                                        "paddingTop": "200px",
+                                        "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/onsenbba.jpg",
+                                        "align": "center",
+                                        "borderRadius": "50"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "paddingRight": "50px",
+                                        "paddingBottom": "50px",
+                                        "textAlign": "right",
+                                        "text": "おんせん"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "id": "show",
+                                "justifyContent": "end",
+                                "item": [
+                                    {
+                                        "type": "Image",
+                                        "width": "100vw",
+                                        "height": "90vh",
+                                        "paddingTop": "200px",
+                                        "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/show.jpg",
+                                        "align": "center",
+                                        "borderRadius": "50"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "paddingRight": "50px",
+                                        "paddingBottom": "50px",
+                                        "textAlign": "right",
+                                        "text": "しょう"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "id": "seino",
+                                "justifyContent": "end",
+                                "item": [
+                                    {
+                                        "type": "Image",
+                                        "width": "100vw",
+                                        "height": "90vh",
+                                        "paddingTop": "200px",
+                                        "source": "https://s3-ap-northeast-1.amazonaws.com/aajug-apl-handson/seino.jpg",
+                                        "align": "center",
+                                        "borderRadius": "50"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "paddingRight": "50px",
+                                        "paddingBottom": "50px",
+                                        "textAlign": "right",
+                                        "text": "せーの"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Text",
+                        "width": "0",
+                        "height": "0",
+                        "text": "\"\"",
+                        "id": "SpeechOnsen",
+                        "speech": "${payload.cheerData.properties.OnsenSpeech}"
+                    },
+                    {
+                        "type": "Text",
+                        "width": "0",
+                        "height": "0",
+                        "text": "\"\"",
+                        "id": "SpeechShow",
+                        "speech": "${payload.cheerData.properties.ShowSpeech}"
+                    },
+                    {
+                        "type": "Text",
+                        "width": "0",
+                        "height": "0",
+                        "text": "\"\"",
+                        "id": "SpeechSeino",
+                        "speech": "${payload.cheerData.properties.SeinoSpeech}"
+                    },
+                    {
+                        "type": "Text",
+                        "width": "0",
+                        "height": "0",
+                        "text": "\"\"",
+                        "id": "SpeechRest",
+                        "speech": "${payload.cheerData.properties.RestSpeech}"
+                    }
+                ]
+            }
+        ]
+    }
+}
